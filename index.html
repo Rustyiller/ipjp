@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Józef Piłsudski – Poznaj historię Marszałka</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- EKRAN GŁÓWNY -->
+    <div id="main-screen" class="screen active">
+        <div class="hero-overlay main-hero">
+
+            <main class="menu-grid">
+                <!-- Przycisk QUIZ z dedykowaną grafiką -->
+                <button class="menu-card interactive-btn image-btn" id="btn-quiz" aria-label="QUIZ - Sprawdź, ile wiesz">
+                    <img src="assets/images/quiz-btn.jpg" alt="QUIZ – Sprawdź, ile wiesz">
+                </button>
+
+                <!-- Przycisk MAPA z dedykowaną grafiką -->
+                <button class="menu-card interactive-btn image-btn" id="btn-map" aria-label="MAPA - Gdzie działała historia?">
+                    <img src="assets/images/mapa-btn.jpg" alt="MAPA – Gdzie działała historia?">
+                </button>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- EKRAN QUIZ -->
+    <div id="quiz-screen" class="screen">
+        <div class="hero-overlay content-overlay">
+            <div class="content-container">
+                <div class="top-nav-bar">
+                    <button class="back-btn" id="quiz-back">← Powrót do strony głównej</button>
+                    <div class="progress-indicator" id="progress-indicator">Pytanie 1 z 10</div>
+                </div>
+                
+                <div class="quiz-card">
+                    <h2 id="question-text">Treść pytania</h2>
+                    <div class="options-container" id="options-container"></div>
+                    <div class="explanation-box hidden" id="explanation-box">
+                        <h4>Wyjaśnienie:</h4>
+                        <p id="explanation-text"></p>
+                    </div>
+                    <button class="action-btn hidden" id="next-question-btn">Następne pytanie</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EKRAN WYNIKÓW QUIZU -->
+    <div id="quiz-results-screen" class="screen">
+        <div class="hero-overlay content-overlay">
+            <div class="content-container">
+                <div class="results-card">
+                    <h2>Podsumowanie Quizu</h2>
+                    <p class="result-message">Ukończyłeś quiz o Józefie Piłsudskim!</p>
+                    <div class="score-display">
+                        <span id="score-number">0</span> / <span id="total-questions-num">10</span>
+                        <div id="score-percentage" class="percentage">0%</div>
+                    </div>
+                    <div class="results-buttons">
+                        <button class="action-btn" id="retry-btn">Spróbuj ponownie</button>
+                        <button class="secondary-btn" id="results-home-btn">Powrót do strony głównej</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EKRAN MAPA / WIDEO -->
+    <div id="map-screen" class="screen">
+        <div class="hero-overlay content-overlay">
+            <div class="content-container">
+                <div class="top-nav-bar">
+                    <button class="back-btn" id="map-back">← Powrót do strony głównej</button>
+                    <h2 style="color: #e6c594; font-size: 1.2rem;">Rozbiory Polski i Karta Historyczna</h2>
+                </div>
+                
+                <div class="video-container-wrapper">
+                    <video id="local-video" controls loop>
+                        <source src="assets/video/film.mp4" type="video/mp4">
+                        Twoja przeglądarka nie obsługuje tagu wideo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/quiz-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
